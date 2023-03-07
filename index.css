@@ -1,0 +1,114 @@
+*{
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+    margin: 0;
+    color: rgb(75, 74, 74);
+}
+/* navbar */
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+#navleft{
+    display: flex;
+}
+#navleft > div{
+    display: flex;
+    align-items: center;
+}
+#navleft > div:nth-child(1) img{
+    margin: auto 20px;
+    width: 110px;
+}
+#navleft > div:nth-child(1){
+    padding-top: 5px;
+}
+#navleft > div:nth-child(2) h4{
+    color: rgb(247, 110, 60);
+}
+#navleft > div h4{
+    margin: auto 15px;
+    font-size: 0.975em
+}
+
+#navright{
+    display: flex;
+    margin-right: 21px;
+}
+#navright > div{
+    display: flex;
+    align-items: center;
+}
+#navright > div:nth-child(3) img{
+    margin: auto 20px;
+    width: 30px;
+}
+#navright > div h5{
+    margin: auto 15px;
+}
+/* navbar */
+
+/* navinput */
+#inputnav{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    padding-top: 7px;
+    padding-right: 30px;
+    padding-bottom: 7px;
+    padding-left: 50px;
+    
+}
+
+#inputnav > div{
+    display: flex;
+
+}
+
+#inputnavright > div{
+    margin-left: 3px;
+}
+#inputnavright {
+    display: flex;
+    align-items: center;
+}
+#inputnavright > div select{
+    width: 200px;
+    height: 35px;
+    border: none;
+    background-color: rgb(233, 233, 233);
+    padding-left: 15px;
+    padding-right: 10px;
+    border-radius: 2px;
+}
+#inputnavright > div input{
+    width: 550px;
+    height: 35px;
+    border: none;
+    background-color: rgb(233, 233, 233);
+    padding-left: 15px;
+    border-radius: 2px;
+}
+
+
+#inputnavleft {
+    display: flex;
+    align-items: center;
+}
+#inputnavleft > div{
+    margin-left: 8px;
+}
+#inputnavleft > div > button{
+    padding: 10px 28px;
+    background-color: #FF6F61;
+    border: 0px;
+    color: #FFFF;
+    border-radius: 4px;
+}
+
+/* navinput */
