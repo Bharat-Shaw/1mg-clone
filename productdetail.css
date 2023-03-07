@@ -27,7 +27,7 @@ body{
     margin-top: 12px;
 }
 #smallimages img{
-    width: 90%;
+    /* width: 70%; */
     /* width: 51px; */
     max-height: 51px;
     padding-left: 2px;
@@ -44,3 +44,13 @@ body{
     margin-top: -6px;
     width: 100%;
 }
+
+
+h2{
+    font-size: 22px;
+}
+
+#smallimages img.active {
+    border: 2px solid red;
+  }
+  
