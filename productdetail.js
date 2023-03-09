@@ -1,5 +1,5 @@
-const id=1;
-
+const id= localStorage.getItem("productid");
+console.log(id);
 // setInterval(function() {
 //     var loadlater = document.getElementById("summarycontainer");
     
@@ -145,13 +145,15 @@ function displayproduct(data){
         normalprice.textContent= "₹"+elem.price;
 
         let dashprice= document.createElement("p");
-        dashprice.textContent= "₹" + (elem.price+100);
+        // dashprice.textContent= "₹" + (elem.price+100);
+        dashprice.textContent= "₹" + Math.floor(elem.price/(1-elem.off/100))
         dashprice.style.textDecoration = "line-through";
 
         let discountdiv= document.createElement("div");
         discountdiv.setAttribute("class", "discountdiv");
         let discount= document.createElement("p");
-        discount.textContent= Math.round((elem.price + 100)/(elem.price/10)) + "% off";
+        // discount.textContent= Math.round((elem.price + 100)/(elem.price/10)) + "% off";
+        discount.textContent=elem.off +"% off";
         discountdiv.append(discount);
         normalpricediv.append(circleicon,normalprice,dashprice,discountdiv);
         document.getElementById("productpricediv").append(normalpricediv);
@@ -276,11 +278,38 @@ let addtocartbtn = document.getElementById("addtocartbtn");
 //     }, 2000);
 
 // }
+//clone code
+
+let cartArr = JSON.parse(localStorage.getItem("toCart")) || [];
+
+let checkCart = (data) => {
+    let isExist = false
+    cartArr.forEach(cIteams => {
+        if(cIteams.id == data.id) {
+            isExist = true
+        }
+        // console.log(cIteams.id,  data.id )
+    })
+    return isExist;
+}
+
 function addtoCart(circleiconcareplan,elem){
     var quantitySelect = document.getElementById("quantity-select");
     var quantity = quantitySelect.value;
-    localStorage.setItem("id", id);
+    // localStorage.setItem("id", id);
     localStorage.setItem("quantity", quantity);
+
+    if(checkCart(elem)) {
+        elem.quantity++;
+        localStorage.setItem("toCart", JSON.stringify(cartArr))
+        alert("Increased Item Quantity")
+    }
+    else {
+        cartArr.push(elem)
+        localStorage.setItem("toCart", JSON.stringify(cartArr))
+        //alert("Item Added Successfully")
+    }
+
     var plan = ""; 
 
     if(circleiconcareplan.classList.contains("fa-circle-dot")){
