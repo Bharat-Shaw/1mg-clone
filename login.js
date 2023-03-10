@@ -2,6 +2,8 @@ var slideIndex = 1;
 
 var myTimer;
 
+var user_details = {};
+
 window.addEventListener("load", function () {
   showSlides(slideIndex);
   myTimer = setInterval(function () {
@@ -106,11 +108,13 @@ document
   .addEventListener("click", function () {
     let number = document.getElementById("mobile_number").value;
     let string = number.toString();
+
     if (string.length != 10) {
       document.getElementById("account_invalid_num").style.display = "block";
       document.getElementById("account_continue").style.marginTop = "20px";
     } else {
-      localStorage.setItem("mobile_number", JSON.stringify(number));
+      user_details.number = number;
+      localStorage.setItem("loggeduser", JSON.stringify(user_details));
       document.getElementById("user_mobile").textContent = number;
       let a = document.getElementById("account_2");
       let b = document.getElementById("account_1");
@@ -130,12 +134,15 @@ document
   .addEventListener("click", function () {
     let number = document.getElementById("login_mobile_number").value;
     let string = number.toString();
+
     // console.log(string.length);
     if (string.length != 10) {
       document.getElementById("login_invalid_num").style.display = "block";
       document.getElementById("login_button-1").style.marginTop = "20px";
     } else {
-      localStorage.setItem("mobile_number", JSON.stringify(number));
+      user_details.number = number;
+      localStorage.setItem("loggeduser", JSON.stringify(user_details));
+      //   localStorage.setItem("mobile_number", JSON.stringify(number));
       document.getElementById("user_mobile").textContent = number;
       let a = document.getElementById("account_2");
       let b = document.getElementById("account_1");
@@ -174,6 +181,8 @@ document.getElementById("done").addEventListener("click", function () {
       otp_snack.className = otp_snack.className.replace("show", "");
     }, 5000);
   } else {
+    user_details.otp = user_otp;
+    localStorage.setItem("loggeduser", JSON.stringify(user_details));
     let a = document.getElementById("account_2");
     let b = document.getElementById("account_1");
     let c = document.getElementById("verify_otp");
@@ -193,7 +202,10 @@ document
       document.getElementById("invalid_email").style.display = "block";
       document.getElementById("email_continue").style.marginTop = "20px";
     } else {
-      let f = document.getElementById("email_new").value;
+      let user_email = document.getElementById("email_new").value;
+      user_details.email = user_email;
+      localStorage.setItem("loggeduser", JSON.stringify(user_details));
+      //   save in local storage
       window.location.href = "index.html";
       document.getElementById("invalid_email").style.display = "none";
       document.getElementById("email_continue").style.marginTop = "125px";

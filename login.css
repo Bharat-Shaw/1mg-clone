@@ -313,3 +313,19 @@ form {
     opacity: 0;
   }
 }
+
+/* @media screen and (max-width: 750px) {
+  #slideshow_container{
+    display: none;
+  }
+  #container_1{
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  body {
+    background-color: olive;
+  }
+} */
