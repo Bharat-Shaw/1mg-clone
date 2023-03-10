@@ -1,14 +1,14 @@
-
-body{
+body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
-  #container {
+
+#container {
   width: 100%;
   height: 100vh;
   /* padding-top: 250px; */
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -314,17 +314,30 @@ form {
   }
 }
 
-/* @media screen and (max-width: 750px) {
-  #slideshow_container{
+@media screen and (max-width: 750px) {
+  #slideshow_container {
     display: none;
   }
-  #container_1{
+
+  #container_1 {
     width: 100%;
+    background-color: #717171;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #account_1,
+  #account_2,
+  #verify_otp,
+  #email_id_new {
+    background-color: aqua;
+    /* width: 100%; */
+    
+    /* padding: 0; */
   }
 }
 
 
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
   body {
     background-color: olive;
   }
