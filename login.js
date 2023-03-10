@@ -67,8 +67,7 @@ resume = () => {
   }, 3000);
 };
 
-var otp = 123456;
-
+var otp = 1234;
 document.getElementById("login_span").addEventListener("click", function () {
   let a = document.getElementById("account_1");
   let b = document.getElementById("account_2");
@@ -148,19 +147,43 @@ document
       d.style.display = "none";
       document.getElementById("login_invalid_num").style.display = "none";
       document.getElementById("login_button-1").style.marginTop = "70px";
+
+      //   console.log("Snackbar code")
+
+      //snackbar code
+      const otp_snack = document.getElementById("snackbar_otp");
+      otp_snack.textContent = "Your OTP:" + otp;
+      //   console.log(otp_snack);
+      otp_snack.className = "show";
+      setTimeout(function () {
+        otp_snack.className = otp_snack.className.replace("show", "");
+      }, 3000);
     }
   });
 
 document.getElementById("done").addEventListener("click", function () {
-  let a = document.getElementById("account_2");
-  let b = document.getElementById("account_1");
-  let c = document.getElementById("verify_otp");
-  let d = document.getElementById("email_id_new");
-  a.style.display = "none";
-  b.style.display = "none";
-  c.style.display = "none";
-  d.style.display = "block";
-  document.getElementById("wrong_otp").style.display = "none";
+  //otp verification
+  let user_otp = document.getElementById("one_time_p").value;
+  if (user_otp != otp) {
+    document.getElementById("wrong_otp").style.display = "block";
+    const otp_snack = document.getElementById("snackbar_otp");
+    otp_snack.textContent = "Your OTP:" + otp;
+    //   console.log(otp_snack);
+    otp_snack.className = "show";
+    setTimeout(function () {
+      otp_snack.className = otp_snack.className.replace("show", "");
+    }, 5000);
+  } else {
+    let a = document.getElementById("account_2");
+    let b = document.getElementById("account_1");
+    let c = document.getElementById("verify_otp");
+    let d = document.getElementById("email_id_new");
+    a.style.display = "none";
+    b.style.display = "none";
+    c.style.display = "none";
+    d.style.display = "block";
+    document.getElementById("wrong_otp").style.display = "none";
+  }
 });
 
 document
@@ -177,8 +200,6 @@ document
     }
   });
 
-
-
 document.getElementById("otp_sms").addEventListener("click", function () {
   document.getElementById("error").innerHTML =
     "You will soon receive an SMS with the OTP";
@@ -189,3 +210,10 @@ document.getElementById("otp_call").addEventListener("click", function () {
     "You will soon receive an call with the OTP";
   document.getElementById("error").style.color = "green";
 });
+
+// let go_to_home = document.getElementById("close_btn");
+
+// go_to_home.addEventListener("click",function(){
+//     console.log("close clicked");
+//     window.location.href="index.html";
+// });
