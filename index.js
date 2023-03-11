@@ -1,10 +1,193 @@
+import {navbar} from './navbar.js';
 const healthlist=document.getElementById("healthlist");
 const brandlist=document.getElementById("brandlist");
 const checkuplist=document.getElementById("checkuplist");
 const testlist=document.getElementById("testlist");
 const popularlist=document.getElementById("popularlist");
 
+document.getElementById("navimport").innerHTML = navbar();
+let checkuplistarr = [
+  {
+    "id": 1,
+    "name": "Comprehensive Gold...",
+    "test": "Includes 78 tests",
+    "image": "https://onemg.gumlet.io/diagnostics/b1f8f81e-5677-11ec-9fd9-0a65f29f7340.png?format=auto",
+    "rating": "4.9 ⭐",
+    "price": "₹ 2099",
+    "dis": "₹ 4198",
+    "off": "50% Off"
+  },
+  {
+      "id": 2,
+      "name": "Good Health Smart...",
+    "test": "Includes 78 tests",
+    "image": "https://onemg.gumlet.io/diagnostics/b1f8f81e-5677-11ec-9fd9-0a65f29f7340.png?format=auto",
+    "rating": "4.9 ⭐",
+    "price": "₹ 2099",
+    "dis": "₹ 4198",
+    "off": "50% Off"
+  },
+  {
+    "id": 3,
+    "name": "Good Health Smart...",
+    "test": "Includes 78 tests",
+    "image": "https://onemg.gumlet.io/diagnostics/b1f8f81e-5677-11ec-9fd9-0a65f29f7340.png?format=auto",
+    "rating": "4.9 ⭐",
+    "price": "₹ 2099",
+    "dis": "₹ 4198",
+    "off": "50% Off"
+  },
+  {
+      "id": 4,
+      "name": "Good Health Smart...",
+    "test": "Includes 78 tests",
+    "image": "https://onemg.gumlet.io/diagnostics/b1f8f81e-5677-11ec-9fd9-0a65f29f7340.png?format=auto",
+    "rating": "4.9 ⭐",
+    "price": "₹ 2099",
+    "dis": "₹ 4198",
+    "off": "50% Off"
+  },
+  {
+    "id": 5,
+    "name": "Good Health Smart...",
+    "test": "Includes 78 tests",
+    "image": "https://onemg.gumlet.io/diagnostics/b1f8f81e-5677-11ec-9fd9-0a65f29f7340.png?format=auto",
+    "rating": "4.9 ⭐",
+    "price": "₹ 2099",
+    "dis": "₹ 4198",
+    "off": "50% Off"
+  },
+  {
+    "id": 6,
+    "name": "Good Health Smart...",
+    "test": "Includes 78 tests",
+    "image": "https://onemg.gumlet.io/diagnostics/b1f8f81e-5677-11ec-9fd9-0a65f29f7340.png?format=auto",
+    "rating": "4.9 ⭐",
+    "price": "₹ 2099",
+    "dis": "₹ 4198",
+    "off": "50% Off"
+  },
+  // {
+  //     "id": 7,
+  //     "name": "Good Health Smart...",
+  //   "test": "Includes 78 tests",
+  //   "image": "https://onemg.gumlet.io/diagnostics/b1f8f81e-5677-11ec-9fd9-0a65f29f7340.png?format=auto",
+  //   "rating": "4.9 ⭐",
+  //   "price": "₹ 2099",
+  //   "dis": "₹ 4198",
+  //   "off": "50% Off"
+  //   },
+  //   {
+  //     "id": 8,
+  //     "name": "Good Health Smart...",
+  //   "test": "Includes 78 tests",
+  //   "image": "https://onemg.gumlet.io/diagnostics/b1f8f81e-5677-11ec-9fd9-0a65f29f7340.png?format=auto",
+  //   "rating": "4.9 ⭐",
+  //   "price": "₹ 2099",
+  //   "dis": "₹ 4198",
+  //   "off": "50% Off"
+  //   },
+  //   {
+  //     "id": 9,
+  //     "name": "Good Health Smart...",
+  //   "test": "Includes 78 tests",
+  //   "image": "https://onemg.gumlet.io/diagnostics/b1f8f81e-5677-11ec-9fd9-0a65f29f7340.png?format=auto",
+  //   "rating": "4.9 ⭐",
+  //   "price": "₹ 2099",
+  //   "dis": "₹ 4198",
+  //   "off": "50% Off"
+  //   },
+]
 
+let popularlistarr = [
+  {
+    "id": 1,
+    "name": "Top Deals",
+    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/a234333b-665f-4baf-be30-f32800ce7046.png",
+    
+  },
+  {
+      "id": 2,
+      "name": "Vitamins & Supplements",
+      "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/a7a50447-24ae-4154-9fc1-e661d663be92.png",
+  },
+  {
+    "id": 3,
+    "name": "Nutritional Drinks",
+    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/42f036d9-971b-4539-9716-10b82179693d.png"
+  },
+  {
+      "id": 4,
+      "name": "Personal Care",
+      "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/1dd3a697-8cbc-4f68-956f-74f1b8d890e6.png"
+  },
+  {
+    "id": 5,
+    "name": "Skin Care",
+    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/fddbc927-feb1-4813-9f8b-9ce864284ea7.png"
+  },
+  {
+    "id": 6,
+    "name": "Pain Relief",
+    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/6a7dc1cb-4c12-41e3-a9bb-c9e0fa72edea.png"
+  },
+
+  {
+    "id": 7,
+    "name": "Ayurveda",
+    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/11ebce0e-fbc8-4f59-a9ab-79ad7d623ce0.png"
+},
+]
+
+let brandlistarr = [
+  {
+    "id": 1,
+    "name": "Zandu",
+    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/2236c9a9-37c5-4132-aa2c-c616c7b62980.png",
+    
+  },
+  {
+      "id": 2,
+      "name": "Dr. Morepen",
+      "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/d0a7a1ef-7196-42e1-80a8-1c027f6d5224.png",
+  },
+  {
+    "id": 3,
+    "name": "Optimum Nutrition",
+    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/63b908c2-f1f1-44ef-ba81-4ee665ec46ba.png"
+  },
+  {
+      "id": 4,
+      "name": "Mamaearth",
+      "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/3489fa92-fdd4-4601-98e0-326d3391c1f3.png"
+  },
+  {
+    "id": 5,
+    "name": "Baidyanath",
+    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/e39ed719-0567-4ef7-8679-7396aca9ab04.png"
+  },
+  {
+    "id": 6,
+    "name": "Himalaya",
+    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/a7b20440-e9d7-444f-a7af-9fd1306ddcb2.png"
+  },
+
+  {
+    "id": 7,
+    "name": "Dr Willmar Schwabe",
+    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/3acf77f5-ca61-48ac-87b8-00d163d37e31.png"
+},
+// {
+//   "id": 8,
+//   "name": "Tejasya Ayurveda",
+//   "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/8b77c71c-4e7b-48c5-94d6-811748118d10.png"
+// },
+// {
+//   "id": 9,
+//   "name": "TATA 1mg Health Products",
+//   "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/a307b427-631d-436b-bdfc-4a221836588d.png"
+// },
+]
 
 let healthlistarr = [
     {
@@ -38,87 +221,58 @@ let healthlistarr = [
       "name": "Kidney care",
       "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/e77d5099-d905-4462-ab9d-b51802e3739b.png"
     },
-    {
-        "id": 7,
-        "name": "Derma care",
-        "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/6f9a726a-4a98-42e6-a834-67381be5e330.png"
-    },
-    {
-      "id": 8,
-      "name": "Respiratory care",
-      "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/4a788b46-97f3-460e-afb6-428368f779ee.png"
-    },
-    {
-      "id": 9,
-      "name": "Eye care",
-      "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/631e3dca-3d5b-49f8-832b-8341ec4784e7.png"
-    },
+    // {
+    //     "id": 7,
+    //     "name": "Derma care",
+    //     "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/6f9a726a-4a98-42e6-a834-67381be5e330.png"
+    // },
+    // {
+    //   "id": 8,
+    //   "name": "Respiratory care",
+    //   "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/4a788b46-97f3-460e-afb6-428368f779ee.png"
+    // },
+    // {
+    //   "id": 9,
+    //   "name": "Eye care",
+    //   "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/631e3dca-3d5b-49f8-832b-8341ec4784e7.png"
+    // },
 ]
 
 displayData(healthlistarr);
 
 
-// function displayData(data){
-//     data.map(function(elem){
-//         const link=document.createElement("a");
-//         link.href="https://www.1mg.com/";
-//         link.style.textDecoration = "none";
-
-//         const card=document.createElement("div");
-        
-//         const img=document.createElement("img");
-//         img.src=elem.image;
-
-//         const span=document.createElement("span");
-//         span.textContent=elem.name;
-
-//         card.append(img, span);
-//         link.append(card);
-//         healthlist.append(link);
-
-//     })
-// }
 function displayData(data){
-  const carouselContainer = document.querySelector('.carousel');
-  let carouselWidth = 0;
+    data.map(function(elem){
+        const link=document.createElement("a");
+        link.href="productlist.html";
+        link.style.textDecoration = "none";
 
-  data.forEach(function(elem){
-      const link = document.createElement("a");
-      link.href = "https://www.1mg.com/";
-      link.style.textDecoration = "none";
+        const card=document.createElement("div");
+        
+        const img=document.createElement("img");
+        img.src=elem.image;
 
-      const card = document.createElement("div");
+        const span=document.createElement("span");
+        span.textContent=elem.name;
 
-      const img = document.createElement("img");
-      img.src = elem.image;
+        card.append(img, span);
+        link.append(card);
+        healthlist.append(link);
 
-      const span = document.createElement("span");
-      span.textContent = elem.name;
-
-      card.append(img, span);
-      link.append(card);
-      carouselContainer.append(link);
-
-      // Get the width of each link and add it to carouselWidth
-      carouselWidth += link.offsetWidth;
-  })
-
-  // Set the width of the carousel container to the total width of the links
-  carouselContainer.style.width = carouselWidth + 'px';
+    })
 }
 
+displayData1(checkuplistarr);
 function displayData1(data){
-  
-  let checkuplistWidth = 0;
 
   data.forEach(function(elem){
       const link = document.createElement("a");
-      link.href = "https://www.1mg.com/";
+      link.href = "productlist.html";
       link.style.textDecoration = "none";
 
       const card = document.createElement("div");
 
-      const h4 = document.createElement("h4");
+      const h4 = document.createElement("h6");
       h4.textContent = elem.name;
 
       const test = document.createElement("span");
@@ -135,67 +289,125 @@ function displayData1(data){
       const price = document.createElement("span");
       price.textContent = elem.price;
 
+      const br1 = document.createElement("br");
+
       const dis = document.createElement("span");
       dis.textContent = elem.dis;
 
       const off = document.createElement("span");
       off.textContent = "50% Off";
 
-      card.append(h4, test, img, rating, br, price, dis, off );
+      card.append(h4, test, br1, img, rating, br, price, );
       link.append(card);
-      carouselContainer.append(link);
+      checkuplist.append(link);
 
-      // Get the width of each link and add it to carouselWidth
-      checkuplistWidth += link.offsetWidth;
   })
-
-  // Set the width of the carousel container to the total width of the links
-  checkuplist.style.width = checkuplistWidth + 'px';
 }
 
 
-// Get the carousel container and its width
-const carouselContainer = document.querySelector('.carousel');
-const carouselWidth = carouselContainer.offsetWidth;
-
-// Initialize the current position of the carousel
-let currentPosition = 0;
-
-// Add event listeners for the next and previous buttons
-document.querySelector('.next-button').addEventListener('click', function(){
-    if (currentPosition > -(carouselWidth - window.innerWidth)) {
-        currentPosition -= 250;
-        carouselContainer.style.transform = `translateX(${currentPosition}px)`;
-    }
-});
-
-document.querySelector('.prev-button').addEventListener('click', function(){
-    if (currentPosition < 0) {
-        currentPosition += 250;
-        carouselContainer.style.transform = `translateX(${currentPosition}px)`;
-    }
-});
+displayData12(brandlistarr);
 
 
-// const checkuplistWidth = carouselContainer.offsetWidth;
+function displayData12(data){
+    data.map(function(elem){
+        const link=document.createElement("a");
+        link.href="productlist.html";
+        link.style.textDecoration = "none";
+
+        const card=document.createElement("div");
+        
+        const img=document.createElement("img");
+        img.src=elem.image;
+
+        const span=document.createElement("span");
+        span.textContent=elem.name;
+
+        card.append(img, span);
+        link.append(card);
+        testlist.append(link);
+
+    })
+}
+// function displayData(data){
+//   const carouselContainer = document.querySelector('.carousel');
+//   let carouselWidth = 0;
+
+//   data.forEach(function(elem){
+//       const link = document.createElement("a");
+//       link.href = "https://www.1mg.com/";
+//       link.style.textDecoration = "none";
+
+//       const card = document.createElement("div");
+
+//       const img = document.createElement("img");
+//       img.src = elem.image;
+
+//       const span = document.createElement("span");
+//       span.textContent = elem.name;
+
+//       card.append(img, span);
+//       link.append(card);
+//       carouselContainer.append(link);
+
+//       // Get the width of each link and add it to carouselWidth
+//       carouselWidth += link.offsetWidth;
+//   })
+
+//   // Set the width of the carousel container to the total width of the links
+//   carouselContainer.style.width = carouselWidth + 'px';
+// }
+
+//   // Set the width of the carousel container to the total width of the links
+//   checkuplist.style.width = checkuplistWidth + 'px';
+// }
+
+
+// // Get the carousel container and its width
+// const carouselContainer = document.querySelector('.carousel');
+// const carouselWidth = carouselContainer.offsetWidth;
 
 // // Initialize the current position of the carousel
-// let currentPosition1 = 0;
+// let currentPosition = 0;
 
 // // Add event listeners for the next and previous buttons
-// document.querySelector('.next-button1').addEventListener('click', function(){
-//     if (currentPosition1 > -(checkuplistWidth - window.innerWidth)) {
-//         currentPosition1 -= 250;
-//         checkuplist.style.transform = `translateX(${currentPosition1}px)`;
+// document.querySelector('.next-button').addEventListener('click', function(){
+//     if (currentPosition > -(carouselWidth - window.innerWidth)) {
+//         currentPosition -= 250;
+//         carouselContainer.style.transform = `translateX(${currentPosition}px)`;
 //     }
 // });
 
-// document.querySelector('.prev-button1').addEventListener('click', function(){
-//     if (currentPosition1 < 0) {
-//         currentPosition1 += 250;
-//         checkuplist.style.transform = `translateX(${currentPosition1}px)`;
+// document.querySelector('.prev-button').addEventListener('click', function(){
+//     if (currentPosition < 0) {
+//         currentPosition += 250;
+//         carouselContainer.style.transform = `translateX(${currentPosition}px)`;
 //     }
 // });
+
+displayData24(popularlistarr);
+
+
+function displayData24(data){
+    data.map(function(elem){
+        const link=document.createElement("a");
+        link.href="productlist.html";
+        link.style.textDecoration = "none";
+
+        const card=document.createElement("div");
+        
+        const img=document.createElement("img");
+        img.src=elem.image;
+
+        const span=document.createElement("span");
+        span.textContent=elem.name;
+
+        card.append(img, span);
+        link.append(card);
+        popularlist.append(link);
+
+    })
+}
+
 
 
 
@@ -204,15 +416,27 @@ const search=document.getElementById("searchnav")
  search.addEventListener("keypress", func1)
  function func(e){
     const value= e.target.value;
-    console.log("hello");
+    console.log(value);
     localStorage.setItem("query", value);
     let url=`https://json-server-1017.onrender.com/products/?q=${value}`
-    getdatasug(url);
-    console.log("hello");
+    debounce(url);
+
+    
  }
+
+ let timeout;
+    function debounce(url) {
+        if(timeout){
+            clearTimeout(timeout);
+        }
+        timeout = setTimeout(getdatasug, 2000, url);
+
+    }
+
+
  function func1(e){
   if (e.key === "Enter"){
-    location.href="https://www.w3schools.com/jsref/prop_loc_href.asp";
+    location.href="productlist.html";
   }
 }
 
@@ -233,19 +457,19 @@ function displaydatasug(data){
   data.forEach(function(elem,i){
 
   let divcard=document.createElement("div");
-  // divcard.style.padding = "20px";
+  divcard.style.padding = "5px";
 
   let div=document.createElement("a");
-  div.href="https://www.w3schools.com/jsref/prop_loc_href.asp";
+  div.href="productlist.html";
   
 
   let br=document.createElement("br");
-  let br1=document.createElement("br");
+  // let br1=document.createElement("br");
 
   let title=document.createElement("span");
   title.textContent=elem.title;
   
-  div.append(title, br, br1);
+  div.append(title);
   divcard.append(div);
   document.getElementById("suggestion1").append(divcard);
 
@@ -261,131 +485,3 @@ function loggedfunction(){
     document.getElementById("userimg").style.display = "inline-block";
   }
 }
-
-
-let brandlistarr = [
-  {
-    "id": 1,
-    "name": "Mamaearth",
-    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/3489fa92-fdd4-4601-98e0-326d3391c1f3.png",
-    
-  },
-  {
-      "id": 2,
-      "name": "Hansaplast",
-      "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/fbb27eee-e339-493c-a7db-661f6e7c9a40.png",
-  },
-  {
-    "id": 3,
-    "name": "Cetaphil",
-    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/0e515d7e-caba-4080-9070-63b389795b25.png"
-  },
-  {
-      "id": 4,
-      "name": "Sri Sri Tattva",
-      "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/bcca5cdf-1ef3-42b9-ac6c-90c93988e349.png"
-  },
-  {
-    "id": 5,
-    "name": "Medtech",
-    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/ba975795-98dc-4cd8-8b55-3c20230d70e3.png"
-  },
-  {
-    "id": 6,
-    "name": "Nivea",
-    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/6a2e2ad1-c485-4836-919d-d8c0bede7d2f.png"
-  },
-  {
-      "id": 7,
-      "name": "Complan",
-      "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/6a837105-a5bd-4c8e-8afa-2eda2960c9e7.png"
-    },
-    {
-      "id": 8,
-      "name": "Tejasya Ayurveda",
-      "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/8b77c71c-4e7b-48c5-94d6-811748118d10.png"
-    },
-    {
-      "id": 9,
-      "name": "Tata 1mg Products",
-      "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/a307b427-631d-436b-bdfc-4a221836588d.png"
-    },
-]
-let checkuplistarr = [
-  {
-      "id": 1,
-      "name": "Tata 1mg Products",
-      "name": "Tata 1mg Products",
-      "name": "Tata 1mg Products",
-      "name": "Tata 1mg Products",
-      "name": "Tata 1mg Products",
-      "name": "Tata 1mg Products",
-      "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/a307b427-631d-436b-bdfc-4a221836588d.png"
-    },
-]
-let testlistarr = [
-  {
-    "id": 1,
-    "name": "Diabetes care",
-    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/c2a0598f-483c-48ff-9783-71e402aa28d3.png",
-    
-  },
-  {
-      "id": 2,
-      "name": "Diabetes care",
-      "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/ab1da5f4-c074-47d2-b278-a5fbd2c93f1f.png",
-  },
-  {
-    "id": 3,
-    "name": "Diabetes care",
-    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/702457a8-ff7d-43a6-bd1d-6bcb278ce686.png"
-  },
-  {
-      "id": 4,
-      "name": "Diabetes care",
-      "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/995e64ba-5bd9-42bc-8db6-5dc0b821c89d.png"
-  },
-  {
-    "id": 5,
-    "name": "Diabetes care",
-    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/ba975795-98dc-4cd8-8b55-3c20230d70e3.png"
-  },
-  {
-    "id": 6,
-    "name": "Diabetes care",
-    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/e77d5099-d905-4462-ab9d-b51802e3739b.png"
-  },
-]
-let popularlistarr = [
-  {
-    "id": 1,
-    "name": "Diabetes care",
-    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/c2a0598f-483c-48ff-9783-71e402aa28d3.png",
-    
-  },
-  {
-      "id": 2,
-      "name": "Diabetes care",
-      "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/ab1da5f4-c074-47d2-b278-a5fbd2c93f1f.png",
-  },
-  {
-    "id": 3,
-    "name": "Diabetes care",
-    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/702457a8-ff7d-43a6-bd1d-6bcb278ce686.png"
-  },
-  {
-      "id": 4,
-      "name": "Diabetes care",
-      "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/995e64ba-5bd9-42bc-8db6-5dc0b821c89d.png"
-  },
-  {
-    "id": 5,
-    "name": "Diabetes care",
-    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/ba975795-98dc-4cd8-8b55-3c20230d70e3.png"
-  },
-  {
-    "id": 6,
-    "name": "Diabetes care",
-    "image": "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/e77d5099-d905-4462-ab9d-b51802e3739b.png"
-  },
-]

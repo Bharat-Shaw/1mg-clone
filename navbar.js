@@ -2,7 +2,7 @@ function navbar() {
     return `
     <div id="navbartop1">
         <div id="navleft1">
-            <div><img src="https://www.1mg.com/images/tata_1mg_logo.svg" alt=""></div>
+            <div> <a href= "index.html"><img src="https://www.1mg.com/images/tata_1mg_logo.svg" alt=""></a></div>
             <div>
                 <h4>MEDICINES</h4>
             </div>
@@ -26,32 +26,22 @@ function navbar() {
 
         <div id="navright1">
             <div>
-                <h5 id="userlog">Login | Sign Up</h5>
+                <a class ="userlogo" href="login.html"><h5 id="userlog">Login | Sign Up</h5></a>
                 <img src="https://w7.pngwing.com/pngs/831/88/png-transparent-user-profile-computer-icons-user-interface-mystique-miscellaneous-user-interface-design-smile-thumbnail.png" alt="" id="userimg">
             </div>
             <div>
                 <h5>Offers</h5>
             </div>
-            <div><img
+            <div>
+                <a href="cart.html">
+                    <img
                     src="https://static.vecteezy.com/system/resources/thumbnails/009/157/893/small/shopping-cart-set-of-shopping-cart-icon-on-white-background-shopping-cart-icon-shopping-cart-design-shopping-cart-icon-sign-shopping-cart-icon-isolated-shopping-cart-symbol-free-vector.jpg"
-                    alt=""></div>
+                    alt="">
+                </a>
+            </div>
             <div>
                 <h5>Need Help? 
-                    <!-- <nav role="navigation">
-                        <div id="menuToggle">
-                          <input type="checkbox" />
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                          <ul id="menu">
-                            <a href="#"><li>Home</li></a>
-                            <a href="#"><li>About</li></a>
-                            <a href="#"><li>Info</li></a>
-                            <a href="#"><li>Contact</li></a>
-                            <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
-                          </ul>
-                        </div>
-                      </nav> -->
+                    
                 </h5>
                 
             </div>
@@ -84,12 +74,7 @@ function navbar() {
                 </select>
             </div>
             <div>
-                <!-- <div class="container">
-                    <form>
-                        <input type="search" placeholder="Search...">
-                        <button type="submit">Search</button>
-                      </form>
-                </div> -->
+               
                 <input type="text" id="searchnav" placeholder="Search for Medicines and Health Products">
                 <div id="suggestion1"></div>
             </div>
@@ -102,8 +87,7 @@ function navbar() {
                 <button>Quick order</button>
             </div>
         </div>
-
     </div>
     `;
   }
-  export default navbar;
+  export  {navbar};
