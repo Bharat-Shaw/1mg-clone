@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="https://assets.1mg.com/pwa-app/production/1.1.5/static/images/site-icons/1mg-favicon.ico">
     <link rel="stylesheet" href="cart.css">
 </head>
-<body>
+<body onload="loadCart()">
     <div id="container">
         <div id="header">
             <a href="index.html"><img id="logo" src="https://www.1mg.com/images/tata_1mg_logo.svg" ></a>
@@ -70,11 +70,11 @@
                 <div>
                     <div class="cartSummary">
                         <span>Item Total(MRP)</span>
-                        <span id="cartSummarymrp">₹1990</span>
+                        <span id="cartSummarymrp">₹0</span>
                     </div>
                     <div class="cartSummary">
                         <span>Price Discount</span>
-                        <span id="cartSummaryDiscount">-₹995</span>
+                        <span id="cartSummaryDiscount">-₹0</span>
                     </div>
                         <hr>
                     <div class="cartSummary">
@@ -84,11 +84,11 @@
                         <hr>
                     <div class="cartSummary"  id="fontbold">
                         <span>To be paid</span>
-                        <span id="cartSummaryToBePaid">₹995</span>
+                        <span id="cartSummaryToBePaid">₹0</span>
                     </div>
                     <div id="cartTotalSavings">
                         <span id="totalSavingFont">Total Savings</span>
-                        <span id="totalSavingGreen">₹995</span>
+                        <span id="totalSavingGreen">₹0</span>
                     </div>
                 </div>
                 <div id="checkoutBox">
@@ -96,10 +96,10 @@
                         <div>Your delivery location</div>
                         <div>
                             <i class="fa fa-map-marker"></i>
-                            <span>New Delhi</span>
+                            <span>Aman Mehta , House No.137,Sec 15,Hissar,Pincode-125001</span>
                         </div>
                     </div>
-                    <div id="checkoutButton"><a href="address.html" id="a"> CHECKOUT </a></div>
+                    <div id="checkoutButton"><a href="payment.html" id="a"> CHECKOUT </a></div>
                 </div>
             </div>
         </div>
@@ -118,4 +118,4 @@
     </div>
 </body>
 </html>
-<script src="script/cart.js"></script>
+<script src="cart.js"></script>
