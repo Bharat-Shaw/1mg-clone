@@ -321,24 +321,8 @@ form {
 
   #container_1 {
     width: 100%;
-    background-color: #717171;
+    /* background-color: #717171; */
     grid-template-columns: repeat(1, 1fr);
   }
 
-  #account_1,
-  #account_2,
-  #verify_otp,
-  #email_id_new {
-    background-color: aqua;
-    /* width: 100%; */
-    
-    /* padding: 0; */
-  }
 }
-
-
-/* @media screen and (max-width: 450px) {
-  body {
-    background-color: olive;
-  }
-} */
